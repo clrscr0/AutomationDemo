@@ -1,0 +1,69 @@
+# Ignore Visual Studio temporary files, build results, and
+# build log files.
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]pp_Data/
+
+# Ignore build output folders
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MSTest-specific
+TestResults/
+*.trx
+*.coverage
+
+# Ignore Selenium WebDriver downloads or logs
+SeleniumDrivers/
+selenium.log
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Ignore Rider IDE files
+.idea/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore JetBrains Rider files
+.idea/
+
+# Ignore Mac files
+*.DS_Store
+
+# Ignore logs, including test logs
+*.log
+
+# Ignore crash reports
+CrashReport/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Ignore node_modules (if any)
+node_modules/
+
+# Ignore environment-specific settings (optional, if applicable)
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
