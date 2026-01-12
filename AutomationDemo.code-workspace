@@ -1,9 +1,6 @@
 {
 	"folders": [
 		{
-			"path": "DemoAuto-AppiumCS"
-		},
-		{
 			"path": "DemoAuto-PlaywrightTS"
 		},
 		{
@@ -11,6 +8,9 @@
 		},
 		{
 			"path": "DemoAuto-SeleniumCS-BDD"
+		},
+		{
+			"path": "DemoAuto-PlaywrightTS-API"
 		}
 	]
 }
