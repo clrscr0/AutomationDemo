@@ -1,0 +1,40 @@
+name: $(Build.SourceBranchName)-$(Date:yyyyMMdd)$(rev:.r) # Customize your build name here
+
+trigger:
+- '*'
+
+pool: Azure Pipelines
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+  displayName: 'npm install and build'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)'
+    Contents: |
+      package.json
+      package-lock.json
+      playwright.config.*
+      tests/**
+      test-data/**
+      src/**
+      binary-files/**
+      test-options.ts
+      .env
+      node_modules/**
+      tsconfig.json
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  displayName: 'Copy files to artifact staging directory'
+  
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+  condition: succeededOrFailed()

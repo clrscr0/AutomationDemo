@@ -1,0 +1,30 @@
+{
+  "name": "playwrightautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:bdd": "npx bddgen --config playwright.config.bdd.ts ",
+    "test": "npx playwright test --headed",
+    "test:pmdam": "npx playwright test --headed --project pmdam",
+    "test:perf": "npx playwright test --headed --project perf",
+    "test:api": "npx playwright test --config playwright.config.api.ts",
+    "test:api-cip": "npx playwright test --config playwright.config.api.ts --project cip",
+    "test:bdd": "npx bddgen --config playwright.config.bdd.ts && npx playwright test --config playwright.config.bdd.ts --project pmdam --headed",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.13",
+    "allure-playwright": "^3.2.0",
+    "playwright-bdd": "^8.2.1",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "cross-fetch": "^4.1.0",
+    "dotenv": "^16.4.7"
+  }
+}
